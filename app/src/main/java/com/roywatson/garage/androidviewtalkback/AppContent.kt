@@ -40,25 +40,8 @@ fun AppContent() {
             modifier = Modifier
                 .fillMaxSize()
         ) {
-            AndroidView(
-                factory = { context ->
-                    LayoutInflater.from(context).inflate(R.layout.mock_readium_content, null)
-                },
-                update = { view ->
-                },
-            )
-            AndroidView(
-                factory = { context ->
-                    android.widget.Button(context).apply {
-                        text = "Button Button Button"
-                        layoutParams = LinearLayout.LayoutParams(MATCH_PARENT, 250)
-                        setOnClickListener {
-                            showSettings = !showSettings
-                        }
-                    }
-                },
-                update = { view ->
-                },
+            BedrockContent(
+                onShowSettings = { showSettings = !showSettings }
             )
         }
     }
