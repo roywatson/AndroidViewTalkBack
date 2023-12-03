@@ -14,7 +14,7 @@ This project illustrates the difference in TalkBack behavior with and then witho
 
 #### There are two productFlavors:
 
-###### <u>withoutAndroidView</u>: 
+###### withoutAndroidView: 
 
 This flavor populates the main screen with content generated with "standard" @Composables.
 
@@ -22,7 +22,7 @@ In this flavor, the overlaying "Scrim" shields lower layers from user interactio
 
 Repeat the above with TalkBack disabled then again with TalkBack enabled. You will eperience this exact same behavior with TalkBack enabled or disabled.
 
-###### <u>withAndroidView</u>: 
+###### withAndroidView: 
 
 This flavor populates the main screen with content generated with AndroidViews that are backed by view based content (ie XML layouts and programmatically added widget Button)
 
