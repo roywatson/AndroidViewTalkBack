@@ -21,6 +21,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.semantics.invisibleToUser
 import androidx.compose.ui.semantics.onClick
 import androidx.compose.ui.semantics.semantics
@@ -32,19 +33,21 @@ import androidx.compose.ui.viewinterop.AndroidView
 @Composable
 fun AppContent() {
     var showSettings by remember { mutableStateOf(false) }
-    Box(
-        modifier = Modifier
-            .fillMaxSize()
-    ) {
-        Column(
+//    if(!LocalContext.current.isScreenReaderOn()) {
+        Box(
             modifier = Modifier
                 .fillMaxSize()
         ) {
-            BedrockContent(
-                onShowSettings = { showSettings = !showSettings }
-            )
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+            ) {
+                BedrockContent(
+                    onShowSettings = { showSettings = !showSettings },
+                )
+            }
         }
-    }
+//    }
     if(showSettings) {
         Surface(
             modifier = Modifier
