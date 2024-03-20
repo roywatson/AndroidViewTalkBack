@@ -1,4 +1,4 @@
-## **ComposeViewTalkBack project**
+## **AndroidViewTalkBack project**
 
 By ROY WATSON, rwatson@roywatson.com, 12/3/2023.
 
