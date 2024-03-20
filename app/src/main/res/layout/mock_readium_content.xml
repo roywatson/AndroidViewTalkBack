@@ -71,6 +71,5 @@
             android:layout_height="wrap_content"
             android:text="XML mock content"
             android:textSize="48sp"/>
-            />
     </LinearLayout>
 </FrameLayout>

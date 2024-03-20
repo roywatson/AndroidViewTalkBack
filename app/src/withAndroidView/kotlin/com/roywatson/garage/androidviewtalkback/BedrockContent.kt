@@ -29,26 +29,21 @@ fun BedrockContent(
             LayoutInflater.from(context).inflate(R.layout.mock_readium_content, null)
         },
         update = { view ->
-//            val accessClassName =  view.accessibilityClassName // requires api 23
-//            view.accessibilityDelegate // requires api 29
-//            val accessDelegate = view.accessibilityDelegate
-            val virtualNodeProvider = view.accessibilityNodeProvider
-//            val focus = virtualNodeProvider.findAccessibilityNodeInfosByText()
             Log.v("RHAW", "RHAW")
         },
     )
-    AndroidView(
-        factory = { context ->
-            Button(context).apply {
-                text = "Button Button Button"
-                layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 250)
-                setOnClickListener {
-                    onShowSettings()
-                }
-            }
-        },
-        update = { view ->
-        },
-    )
+//    AndroidView(
+//        factory = { context ->
+//            Button(context).apply {
+//                text = "Button Button Button"
+//                layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 250)
+//                setOnClickListener {
+//                    onShowSettings()
+//                }
+//            }
+//        },
+//        update = { view ->
+//        },
+//    )
 
 }
